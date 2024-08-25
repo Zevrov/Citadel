@@ -12,7 +12,7 @@ const matchSchema = new mongoose.Schema({
     deaths: { type: Number, default: 0 },
     assists: { type: Number, default: 0 },
     score: { type: Number, default: 0 },
-    weapons: [{ type: String }]
+    items: [{ type: String }]
   }],
   winningTeam: { type: String, enum: ['A', 'B'] },
   date: { type: Date, default: Date.now }
