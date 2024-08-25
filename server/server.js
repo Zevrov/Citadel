@@ -14,8 +14,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+const MONGODB_URI = process.env.MONGODB_URI.replace('<DB_PASSWORD>', process.env.DB_PASSWORD);
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
